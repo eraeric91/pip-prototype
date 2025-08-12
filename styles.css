@@ -52,6 +52,14 @@
 
 }
 
+@media (max-width: 768px) {
+  :root {
+    --font-size-display: 32px;
+    --font-size-heading: 24px;
+    --font-size-subheading: 20px;
+    }
+}
+
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Comfortaa:wght@300;400;500;600;700&display=swap');
 
