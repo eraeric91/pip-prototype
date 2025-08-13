@@ -77,7 +77,7 @@ body {
 }
 
 /* Poppins for headings */
-h1, h2, h3 {
+h1, h2, {
     font-family: var(--font-header);
 }
 
@@ -96,6 +96,7 @@ h2 {
 }
 
 h3 {
+    font-family: var(--font-body);
     font-size: var(--font-size-subheading);
     font-weight: var(--font-weight-normal);
     line-height: var(--line-height-normal);
