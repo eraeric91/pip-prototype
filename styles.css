@@ -237,6 +237,7 @@ img {
         width: 300px;
         height: 100vh;
         background-color: var(--white);
+        color: black;
         flex-direction: column;
         padding: var(--space-xl);
         transition: right 0.3s ease;
