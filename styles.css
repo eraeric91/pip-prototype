@@ -376,6 +376,10 @@ footer {
   button {
     width: 100%;
   }
+  
+  section {
+    padding: var(--space-2xl) 0;
+  }
 
   .image {
     width: 100%
@@ -384,5 +388,8 @@ footer {
   .two-column-row {
     flex-direction: column; /* Stack vertically on mobile */
   }
+  
+  .text-block {
+    margin-bottom: 48px;
 
 }
