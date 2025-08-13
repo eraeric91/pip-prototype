@@ -133,6 +133,7 @@ nav {
     height: 48px;
     width: auto;
     align-items: center;
+    margin: auto 0;
 }
 
 /* Button styling */
