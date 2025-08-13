@@ -53,45 +53,6 @@
 
 }
 
-@media (max-width: 768px) {
-  :root {
-    --font-size-display: 32px;
-    --font-size-heading: 24px;
-    --font-size-subheading: 20px;
-    }
-    
-  /* Show mobile button */
-    .mobile-menu-toggle {
-        display: block;
-    }
-    
-    /* Hide nav links by default on mobile */
-    .nav-links {
-        position: fixed;
-        top: 0;
-        right: -300px; /* Hidden off-screen */
-        width: 300px;
-        height: 100vh;
-        background-color: var(--white);
-        flex-direction: column;
-        padding: var(--space-xl);
-        transition: right 0.3s ease;
-        box-shadow: -2px 0 10px rgba(0,0,0,0.1);
-        z-index: 1000;
-    }
-    
-    /* Show nav when active */
-    .nav-links.active {
-        right: 0;
-    }
-    
-    /* Stack nav items vertically */
-    .nav-links a, .nav-links button {
-        margin-bottom: var(--space-md);
-        text-align: left;
-    }
-}
-
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Comfortaa:wght@300;400;500;600;700&display=swap');
 
@@ -167,9 +128,15 @@ nav {
 }
 
 /* Logo styling */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
 .logo img {
     max-height: 48px;
     height: auto;
+    display: block;
 }
 
 /* Button styling */
@@ -248,4 +215,43 @@ img {
     max-width: 100%;
     height: auto;
     margin-top: var(--space-2xl);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --font-size-display: 32px;
+    --font-size-heading: 24px;
+    --font-size-subheading: 20px;
+    }
+    
+  /* Show mobile button */
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    /* Hide nav links by default on mobile */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -300px; /* Hidden off-screen */
+        width: 300px;
+        height: 100vh;
+        background-color: var(--white);
+        flex-direction: column;
+        padding: var(--space-xl);
+        transition: right 0.3s ease;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+    
+    /* Show nav when active */
+    .nav-links.active {
+        right: 0;
+    }
+    
+    /* Stack nav items vertically */
+    .nav-links a, .nav-links button {
+        margin-bottom: var(--space-md);
+        text-align: left;
+    }
 }
