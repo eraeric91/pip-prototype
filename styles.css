@@ -237,7 +237,6 @@ img {
         width: 300px;
         height: 100vh;
         background-color: var(--white);
-        color: black;
         flex-direction: column;
         padding: var(--space-xl);
         transition: right 0.3s ease;
@@ -247,11 +246,13 @@ img {
     
     /* Show nav when active */
     .nav-links.active {
+        color: black;
         right: 0;
     }
     
     /* Stack nav items vertically */
     .nav-links a, .nav-links button {
+        color: black;
         margin-bottom: var(--space-md);
         text-align: left;
     }
