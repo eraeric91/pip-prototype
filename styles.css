@@ -171,10 +171,23 @@ button.secondary:hover {
 section {
     padding: var(--space-3xl) 0;
     max-width: 100%;
-    margin: 0 auto;    
+    margin: 0 auto;
+    align-items: center;  
 }
 
 section.hero {
+    background-color: var(--blue);
+    color: var(--white);
+    max-width: 100%;
+}
+
+section.white {
+    background-color: var(--white);
+    color: black;
+    max-width: 100%;
+}
+
+section.blue {
     background-color: var(--blue);
     color: var(--white);
     max-width: 100%;
@@ -188,17 +201,44 @@ section.hero {
 }
 
 .card {
-    padding: var(--space-lg) var(--space-md) var(--space-md) var(--space-md);
+    color: black;
+    padding: var(--space-lg) var(--space-md);
+    background-color: var(--white);
+    text-align: left;
+    border: 1px solid var(--light-20);
+    border-radius: 16px;
+}
+
+.card-outline {
+    color: white;
+    padding: var(--space-lg) var(--space-md);
     text-align: left;
     border: 1px solid var(--white);
     border-radius: 16px;
-    margin-bottom: 32px;
+    margin-bottom: var(--space-xl);
+}
+
+.two-column-row {
+    display: flex;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+.image {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.image-blue {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--blue);
 }
 
 ul {
     list-style: none;
     padding: 0;
-    margin: var(--space-md);
+    margin: var(--space-md) 0 var(--space-sm) 0;
 }
 
 li {
@@ -208,9 +248,10 @@ li {
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
+    max-width: 800px;
     height: auto;
-    margin-top: var(--space-2xl);
+    margin: 0 auto;
     align-items: center;
 }
 
@@ -222,6 +263,14 @@ img {
     }
     
   button {
+    width: 100%;
+  }
+
+  .image {
+    width: 100%
+  }
+
+  .image-blue {
     width: 100%;
   }
 
