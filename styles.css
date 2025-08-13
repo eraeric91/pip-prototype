@@ -116,7 +116,7 @@ nav {
     align-items: center;
     background-color: var(--blue);
     width: 100%;
-    padding: 0 var(--space-lg);
+    padding: var(--space-md) var(--space-lg);
 }
 
 .nav-links {
@@ -133,18 +133,12 @@ nav {
 
 .nav-links a:hover {
     text-decoration: underline;
-    color: var(--light-20);
 }
 
 /* Logo styling */
 .logo img {
     max-height: 48px;
     height: auto;
-}
-
-.logo a {
-    display: flex;
-    align-items: center;
 }
 
 /* Button styling */
