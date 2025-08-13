@@ -27,8 +27,7 @@
   --font-size-display: 48px;    /* For big hero text */
   --font-size-heading: 36px;    /* For main headings */
   --font-size-subheading: 24px; /* For subheadings */
-  --font-size-body-large: 20px;
-  --font-size-body: 16px;       /* For regular text */
+  --font-size-body: 20px;       /* For regular text */
   --font-size-caption: 14px;    /* For small text */
   
   --font-weight-light: 300;
@@ -72,8 +71,18 @@ html, body {
 
 body {
     font-family: var(--font-body);
+    font-size: var(--font-size-body);
     line-height: var(--line-height-normal);
     background-color: var(--cream);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 h1 {
@@ -89,7 +98,7 @@ h2 {
     font-size: var(--font-size-heading);
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-tight);
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-xl);
 }
 
 h3 {
@@ -97,6 +106,10 @@ h3 {
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-normal);
     margin-bottom: var(--space-lg);
+}
+
+.body-large {
+    font-size: var(--font-size-body-large);
 }
 
 /* Navbar styling */
@@ -137,6 +150,7 @@ nav {
 
 /* Button styling */
 button {
+    text-align: center;
     font-family: 'Comfortaa', sans-serif;
     font-size: var(--font-size-body);
     font-weight: var(--font-weight-bold);
@@ -154,7 +168,13 @@ button:hover {
 }
 
 button.nav {
+    background-color: white;
     padding: 12px;
+    font-size: 14px;
+}
+
+button.nav:hover {
+    background-color: var(--light-20);
 }
 
 button.secondary {
@@ -168,8 +188,14 @@ button.secondary:hover {
     border-color: var(--black);
 }
 
+.button {
+    text-align:center;
+    width: 100%;
+    margin: 0 auto;
+}
+
 section {
-    padding: var(--space-3xl) 0;
+    padding: var(--space-4xl) 0;
     max-width: 100%;
     margin: 0 auto;
     align-items: center;  
@@ -219,9 +245,13 @@ section.blue {
 }
 
 .two-column-row {
-    display: flex;
-    gap: var(--space-md);
-    margin-bottom: var(--space-md);
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.two-column-row > * {
+  flex: 1; /* Makes both columns equal width */
 }
 
 .image {
@@ -249,9 +279,67 @@ li {
 img {
     width: 100%;
     max-width: 800px;
-    height: auto;
     margin: 0 auto;
     align-items: center;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--blue);
+    color: white;
+    align-items: center;
+    padding: var(--space-4xl) var(--space-lg);
+    font-size: var(--font-size-body-large);
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+}
+
+.faq-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border: 1px solid var(--light-20);
+    border-radius: 8px;
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--cream);
+    cursor: pointer;
+    margin: 0;
+    font-weight: var(--font-weight-bold);
+}
+
+.faq-question:hover {
+    background-color: var(--light-20);
+}
+
+.faq-icon {
+    font-size: 40px;
+    font-weight: var(--font-weight-light);
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    background-color: var(--cream);
+    max-height: 0;
+    overflow: hidden;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    padding: 20px;
 }
 
 @media (max-width: 768px) {
@@ -259,6 +347,7 @@ img {
     --font-size-display: 32px;
     --font-size-heading: 24px;
     --font-size-subheading: 20px;
+    --font-size-body: 16px;
     }
     
   button {
@@ -269,8 +358,8 @@ img {
     width: 100%
   }
 
-  .image-blue {
-    width: 100%;
+  .two-column-row {
+    flex-direction: column; /* Stack vertically on mobile */
   }
 
 }
