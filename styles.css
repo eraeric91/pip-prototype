@@ -217,23 +217,6 @@ img {
     margin-top: var(--space-2xl);
 }
 
-/* Backdrop overlay */
-.mobile-menu-backdrop {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-}
-
-/* Lock body scroll when menu is open */
-.body-locked {
-    overflow: hidden;
-}
-
 @media (max-width: 768px) {
   :root {
     --font-size-display: 32px;
@@ -273,16 +256,5 @@ img {
         margin-bottom: var(--space-md);
         text-align: left;
     }
-    
-        /* Show backdrop when menu is active */
-    .mobile-menu-backdrop.active {
-        display: block;
-    }
-    
-    /* Update nav-links z-index to be above backdrop */
-    .nav-links {
-        /* your existing styles */
-        z-index: 1000;
-    }
-    
+
 }
