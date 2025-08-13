@@ -128,15 +128,14 @@ nav {
 }
 
 /* Logo styling */
-.logo {
+a.logo {
     display: inline-flex;
     align-items: center;
+    max-height: 48px;
 }
 
 .logo img {
     max-height: 48px;
-    height: auto;
-    display: block;
 }
 
 /* Button styling */
