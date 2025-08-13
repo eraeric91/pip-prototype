@@ -226,13 +226,8 @@ section.blue {
 
 .image {
     max-width: 800px;
+    height: 100%;
     margin: 0 auto;
-}
-
-.image-blue {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: var(--blue);
 }
 
 ul {
@@ -245,6 +240,10 @@ li {
     font-weight: var(--font-weight-bold);
     margin-bottom: var(--space-sm);
     padding-left: var(--space-sm);
+}
+
+.feed {
+    gap: var(--space-3xl);
 }
 
 img {
