@@ -129,8 +129,8 @@ nav {
 
 /* Logo styling */
 .logo {
-  display: flex;
-  align-items: center;
+    display: inline-flex;
+    align-items: center;
 }
 
 .logo img {
