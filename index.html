@@ -113,5 +113,20 @@
     <ul>
         <li>Answer to the question</li>
     </ul>
+    
+    <script>
+        // Add this to your existing script section
+document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+    document.querySelector('.nav-links').classList.toggle('active');
+});
+
+// Close menu when clicking on a link
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', function() {
+        document.querySelector('.nav-links').classList.remove('active');
+    });
+});
+    </script>
+    
 </body>
 </html>
