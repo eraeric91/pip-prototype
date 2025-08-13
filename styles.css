@@ -76,12 +76,8 @@ body {
     background-color: var(--cream);
 }
 
-/* Poppins for headings */
-h1, h2, {
-    font-family: var(--font-header);
-}
-
 h1 {
+    font-family: var(--font-header);
     font-size: var(--font-size-display);
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-tight);
@@ -89,6 +85,7 @@ h1 {
 }
 
 h2 {
+    font-family: var(--font-header);
     font-size: var(--font-size-heading);
     font-weight: var(--font-weight-bold);
     line-height: var(--line-height-tight);
@@ -97,7 +94,7 @@ h2 {
 
 h3 {
     font-size: var(--font-size-subheading);
-    font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-bold);
     line-height: var(--line-height-normal);
     margin-bottom: var(--space-lg);
 }
