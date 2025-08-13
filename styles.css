@@ -59,6 +59,37 @@
     --font-size-heading: 24px;
     --font-size-subheading: 20px;
     }
+    
+  /* Show mobile button */
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    /* Hide nav links by default on mobile */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -300px; /* Hidden off-screen */
+        width: 300px;
+        height: 100vh;
+        background-color: var(--white);
+        flex-direction: column;
+        padding: var(--space-xl);
+        transition: right 0.3s ease;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+    
+    /* Show nav when active */
+    .nav-links.active {
+        right: 0;
+    }
+    
+    /* Stack nav items vertically */
+    .nav-links a, .nav-links button {
+        margin-bottom: var(--space-md);
+        text-align: left;
+    }
 }
 
 /* Import Google Fonts */
