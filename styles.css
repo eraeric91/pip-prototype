@@ -173,27 +173,23 @@ button.secondary:hover {
     border-color: var(--black);
 }
 
-.section {
+section {
     padding: var(--space-3xl) 0;
-    max-width: 800px;
+    max-width: 100%;
     margin: 0 auto;    
 }
 
-.section-hero {
+section.hero {
     background-color: var(--blue);
-    text-align: center;
     color: var(--white);
-    padding: var(--space-4xl) var(--space-md);
     max-width: 100%;
-    margin: 0 auto;
-    gap: var(--space-xl);
-    padding: var(--space-4xl) var(--space-lg);
+    margin: 24px 0 64px 0;
 }
 
-.section-hero .container {
+.container {
     max-width: 800px;
     margin: 0 auto;
-    padding: 0 var(--space-md);
+    padding: 0 var(--space-lg);
     gap: var(--space-xl);
 }
 
