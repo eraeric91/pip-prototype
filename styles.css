@@ -220,5 +220,9 @@ img {
     --font-size-heading: 24px;
     --font-size-subheading: 20px;
     }
+    
+  button {
+    width: 100%;
+  }
 
 }
