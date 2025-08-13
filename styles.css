@@ -174,7 +174,7 @@ button.secondary:hover {
 }
 
 .section {
-    padding: var(--space-3xl) var(--space-lg);
+    padding: var(--space-3xl) 0;
     max-width: 800px;
     margin: 0 auto;    
 }
@@ -183,7 +183,7 @@ button.secondary:hover {
     background-color: var(--blue);
     text-align: center;
     color: var(--white);
-    padding: var(--space-4xl);
+    padding: var(--space-4xl) var(--space-md);
     max-width: 100%;
     margin: 0 auto;
     gap: var(--space-xl);
