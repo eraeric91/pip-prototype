@@ -434,50 +434,64 @@ footer {
   }
   
     nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 16px 16px 16px 24px;
-    }
-    
-    /* Create a flex container for the right side items */
-    .mobile-nav-group {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-    }
-    
-    /* Show mobile elements */
-    .mobile-cta,
-    .mobile-menu-toggle {
-        display: block;
-    }
-    
-    /* Hide desktop CTA */
-    .desktop-cta {
-        display: none;
-    }
-    
-    /* Nav links dropdown */
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color: white;
-        flex-direction: column;
-        padding: 20px;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        gap: 16px;
-    }
-    
-    .nav-links.active {
-        display: flex;
-    }
-    
-    button.nav {
-      width: 160px;
-      }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    position: relative; /* Add this for absolute positioning context */
+  }
+  
+  /* Create a flex container for the right side items */
+  .mobile-nav-group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  /* Show mobile elements */
+  .mobile-cta,
+  .mobile-menu-toggle {
+    display: block;
+  }
+  
+  /* Hide desktop CTA */
+  .desktop-cta {
+    display: none;
+  }
+  
+  /* Nav links dropdown - fix positioning and styling */
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--blue); /* Same as nav background */
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    gap: 16px;
+    z-index: 999; /* Ensure it appears above other content */
+  }
+  
+  /* Style the mobile nav links */
+  .nav-links a {
+    color: var(--white); /* Make sure text is white */
+    font-size: 18px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+  
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
+  
+  .nav-links.active {
+    display: flex;
+  }
+  
+  button.nav {
+    width: 160px;
+  }
 
 }
