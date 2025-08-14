@@ -395,7 +395,8 @@ footer {
   
   footer {
     flex-direction: column;
-    gap: 16px; /* Adds space between stacked items */
+    padding: var(--space-4xl) var(--space-lg);
+    gap: 24px;
     text-align: center;
   }
 
