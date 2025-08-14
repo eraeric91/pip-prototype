@@ -471,4 +471,9 @@ footer {
         display: flex;
     }
 
+    button.nav {
+        font-size: 12px;
+        font-weight: var(--font-weight-bold);
+    }
+
 }
