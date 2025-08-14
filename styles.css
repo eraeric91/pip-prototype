@@ -293,7 +293,6 @@ section.blue {
     text-align: left;
     border: 1px solid var(--white);
     border-radius: 16px;
-    margin-bottom: var(--space-xl);
 }
 
 .two-column-row {
