@@ -87,6 +87,55 @@
         <a href="https://www.instagram.com/pipdigital/">Instagram</a>
         <a href="https://www.facebook.com/profile.php?id=61577223899765">Facebook</a>
     </footer>
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                // Close all items
+                document.querySelectorAll('.faq-item').forEach(faqItem => {
+                    faqItem.classList.remove('active');
+                });
+                    
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    
+        // Mobile Navigation
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if (mobileMenuToggle && navLinks) {
+            mobileMenuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+            
+            // Close menu when clicking on a nav link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', function() {
+                    navLinks.classList.remove('active');
+                });
+            });
+            
+            // Close menu when clicking outside of it
+            document.addEventListener('click', function(event) {
+                const isClickInsideNav = navLinks.contains(event.target) || 
+                                         mobileMenuToggle.contains(event.target);
+                
+                if (!isClickInsideNav && navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                }
+            });
+        }
+    });
+    </script>
 
 </body>
 </html>
