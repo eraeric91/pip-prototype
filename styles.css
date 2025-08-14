@@ -501,5 +501,9 @@ footer {
   .nav-links button.nav {
     width: 100%;
   }
+  
+  button.nav {
+    width: 160px;
+    }
 
 }
