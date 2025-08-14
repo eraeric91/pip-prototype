@@ -473,7 +473,7 @@ footer {
     top: 100%;
     left: 0;
     right: 0;
-    background-color: var(--grey); /* Changed to grey */
+    background-color: var(--purple); /* Changed to grey */
     flex-direction: column;
     padding: 20px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
