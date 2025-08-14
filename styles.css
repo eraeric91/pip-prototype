@@ -141,6 +141,26 @@ nav {
     text-decoration: underline;
 }
 
+.mobile-cta, .mobile-menu-toggle {
+  display: none;
+  }
+  
+.mobile-menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px;
+}
+
+.mobile-menu-toggle span {
+  width: 24px;
+  height: 3px;
+  background-color: #333; /* Adjust color to match your design */
+  transition: 0.3s;
+}
+
 /* Logo styling */
 .logo img {
     height: 48px;
@@ -394,6 +414,35 @@ footer {
     padding: var(--space-4xl) var(--space-lg);
     gap: 24px;
     text-align: center;
+  }
+  
+  /* Show mobile elements */
+  .mobile-cta,
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  
+  /* Hide desktop CTA */
+  .desktop-cta {
+    display: none;
+  }
+  
+  /* Hide nav links by default on mobile */
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white; /* Adjust to match your design */
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  /* Show nav links when active */
+  .nav-links.active {
+    display: flex;
   }
 
 }
