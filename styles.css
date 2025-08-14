@@ -79,9 +79,8 @@ body {
 .marketing-banner {
     background-color: var(--red);
     color: var(--white);
-    font-size: 14px;
     text-align: center;
-    padding: 8px 24px;
+    padding: 16px 24px;
     position: relative;
     z-index: 1000;
 }
@@ -124,6 +123,7 @@ h3 {
 
 /* Navbar styling */
 nav {
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -132,6 +132,7 @@ nav {
     width: 100%;
     padding: 16px var(--space-lg);
     margin: auto 0;
+    z-index: 1000;
 }
 
 .nav-links {
@@ -156,10 +157,6 @@ nav {
     display: none;
 }
 
-.mobile-menu-toggle:hover {
-  background-color: var(--blue);
-  }
-
 /* Mobile menu toggle styling */
 .mobile-menu-toggle {
     background: none;
@@ -171,7 +168,6 @@ nav {
 .mobile-menu-toggle img {
     width: 24px;
     height: 24px;
-    filter: brightness(0) invert(1); /* Makes any color white */
 }
 
 /* Logo styling */
@@ -186,23 +182,23 @@ nav {
 button {
     text-align: center;
     font-family: 'Comfortaa', sans-serif;
-    font-size: 16px;
-    font-weight: var(--font-weight-bold);
+    font-size: 20px;
+    font-weight: 900;
     color: black;
     background-color: var(--green);
-    padding: var(--space-md);
+    border: 0;
+    padding: var(--space-md) var(--space-lg);
     border-radius: 8px;
-    border-color: var(--green);
     cursor: pointer;
 }
 
 button:hover {
     background-color: var(--green-hover);
-    border-color: var(--green-hover);
 }
 
 button.nav {
     background-color: white;
+    border: 1px solid black;
     padding: 12px;
     font-size: 14px;
 }
@@ -213,7 +209,7 @@ button.nav:hover {
 
 button.secondary {
     background-color: var(--white);
-    border-color: var(--grey);
+    border: 1px solid black;
     border-radius: 8px;
 }
 
@@ -257,6 +253,7 @@ section.hero {
     background-color: var(--blue);
     color: var(--white);
     max-width: 100%;
+    margin-top: 88px;
 }
 
 section.white {
@@ -265,7 +262,7 @@ section.white {
     max-width: 100%;
 }
 
-section.blue {
+section.color {
     background-color: var(--blue);
     color: var(--white);
     max-width: 100%;
@@ -293,10 +290,11 @@ section.blue {
     text-align: left;
     border: 1px solid var(--white);
     border-radius: 16px;
+    margin-bottom: var(--space-xl);
 }
 
 .two-column-row {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   gap: 16px;
@@ -394,112 +392,88 @@ footer {
 }
 
 @media (max-width: 768px) {
-  :root {
+    :root {
     --font-size-display: 32px;
     --font-size-heading: 24px;
     --font-size-subheading: 20px;
     --font-size-body: 16px;
     }
-    
-  button {
+
+    .marketing-banner {
+    font-size: 14px;
+    padding: 8px 24px;
+    }
+
+    button {
     width: 100%;
-  }
-  
-  section {
+    font-size: 16px;
+    }
+
+    section {
     padding: var(--space-2xl) 0;
-  }
+    }
 
-  .image {
+    .image {
     width: 100%;
-  }
+    }
 
-  .two-column-row {
+    .two-column-row {
     flex-direction: column; /* Stack vertically on mobile */
-  }
-  
-  .text-block {
+    }
+
+    .text-block {
     margin-bottom: 48px;
-  }
-  
-  footer {
+    }
+
+    footer {
     flex-direction: column;
     padding: var(--space-4xl) var(--space-lg);
     gap: 24px;
     text-align: center;
-  }
-  
-    nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px 16px 16px 24px;
-    position: relative;
-  }
-  
-  /* Create a flex container for the right side items */
-  .mobile-nav-group {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
-  
-  /* Show mobile elements */
-  .mobile-cta,
-  .mobile-menu-toggle {
-    display: block;
-  }
-  
-  /* Fix the menu icon size */
-  .mobile-menu-toggle img {
-    width: 24px;
-    height: 24px;
-    filter: brightness(0) invert(1);
-  }
-  
-  /* Hide desktop CTA */
-  .desktop-cta {
-    display: none;
-  }
-  
-  /* Nav links dropdown - fix positioning and styling */
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: var(--black);
-    opacity: 0.9;
-    flex-direction: column;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    gap: 16px;
-    z-index: 1001;
-  }
-  
-  /* Style the mobile nav links */
-  .nav-links a {
-    color: var(--white);
-    font-size: 18px;
-    padding: 12px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-  }
-  
-  .nav-links a:last-child {
-    border-bottom: none;
-  }
-  
-  .nav-links.active {
-    display: flex;
-  }
-  
-  /* Make the button in the mobile menu full width */
-  .nav-links button.nav {
-    width: 100%;
-  }
-  
-  button.nav {
-    width: 160px;
+    }
+
+    /* Create a flex container for the right side items */
+    .mobile-nav-group {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    /* Show mobile elements */
+    .mobile-cta,
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .mobile-menu-toggle:hover {
+        background-color: var(--blue);
+    }
+
+    /* Hide desktop CTA */
+    .desktop-cta {
+        display: none;
+    }
+
+    /* Nav links dropdown */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        gap: 16px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    button.nav {
+        width: 160px;
     }
 
 }
