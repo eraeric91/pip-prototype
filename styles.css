@@ -432,14 +432,14 @@ footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 16px 20px;
+        padding: 16px 24px;
     }
     
     /* Create a flex container for the right side items */
     .mobile-nav-group {
         display: flex;
         align-items: center;
-        gap: 24px;
+        gap: 16px;
     }
     
     /* Show mobile elements */
