@@ -341,10 +341,6 @@ footer {
     font-weight: var(--font-weight-bold);
 }
 
-.faq-question:hover {
-    background-color: var(--light-20);
-}
-
 .faq-icon {
     font-size: 40px;
     font-weight: var(--font-weight-light);
