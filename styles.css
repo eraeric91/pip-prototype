@@ -438,7 +438,7 @@ footer {
     .mobile-nav-group {
         display: flex;
         align-items: center;
-        gap: 16px;
+        gap: 8px;
     }
 
     /* Show mobile elements */
@@ -473,6 +473,7 @@ footer {
     button.nav {
         font-size: 12px;
         font-weight: var(--font-weight-bold);
+        padding: 8px;
     }
 
 }
