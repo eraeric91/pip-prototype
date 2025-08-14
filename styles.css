@@ -156,6 +156,10 @@ nav {
     display: none;
 }
 
+.mobile-menu-toggle:hover {
+  background-color: var(--blue);
+  }
+
 /* Mobile menu toggle styling */
 .mobile-menu-toggle {
     background: none;
