@@ -192,7 +192,6 @@ button {
 
 button:hover {
     background-color: var(--green-hover);
-    border-color: var(--green-hover);
 }
 
 button.nav {
