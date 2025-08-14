@@ -161,7 +161,7 @@ nav {
     background: none;
     border: none;
     cursor: pointer;
-    padding: 8px;
+    padding: 4px;
 }
 
 .mobile-menu-toggle img {
@@ -292,7 +292,7 @@ section.blue {
 }
 
 .two-column-row {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   gap: 16px;
@@ -390,43 +390,43 @@ footer {
 }
 
 @media (max-width: 768px) {
-  :root {
+    :root {
     --font-size-display: 32px;
     --font-size-heading: 24px;
     --font-size-subheading: 20px;
     --font-size-body: 16px;
     }
-    
-  .marketing-banner {
+
+    .marketing-banner {
     padding: 4px 24px;
-  }
-    
-  button {
+    }
+
+    button {
     width: 100%;
-  }
-  
-  section {
+    }
+
+    section {
     padding: var(--space-2xl) 0;
-  }
+    }
 
-  .image {
+    .image {
     width: 100%
-  }
+    }
 
-  .two-column-row {
+    .two-column-row {
     flex-direction: column; /* Stack vertically on mobile */
-  }
-  
-  .text-block {
+    }
+
+    .text-block {
     margin-bottom: 48px;
-  }
-  
-  footer {
+    }
+
+    footer {
     flex-direction: column;
     padding: var(--space-4xl) var(--space-lg);
     gap: 24px;
     text-align: center;
-  }
+    }
 
     nav {
         display: flex;
@@ -434,25 +434,25 @@ footer {
         align-items: center;
         padding: 16px 20px;
     }
-    
+
     /* Create a flex container for the right side items */
     .mobile-nav-group {
         display: flex;
         align-items: center;
-        gap: 24px;
+        gap: 16px;
     }
-    
+
     /* Show mobile elements */
     .mobile-cta,
     .mobile-menu-toggle {
         display: block;
     }
-    
+
     /* Hide desktop CTA */
     .desktop-cta {
         display: none;
     }
-    
+
     /* Nav links dropdown */
     .nav-links {
         display: none;
@@ -466,7 +466,7 @@ footer {
         box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         gap: 16px;
     }
-    
+
     .nav-links.active {
         display: flex;
     }
