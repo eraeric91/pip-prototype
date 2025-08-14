@@ -446,6 +446,10 @@ footer {
         display: block;
     }
 
+    .mobile-menu-toggle:hover {
+        background-color: none;
+    }
+
     /* Hide desktop CTA */
     .desktop-cta {
         display: none;
