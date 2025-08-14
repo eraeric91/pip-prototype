@@ -422,6 +422,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 16px 24px;
+    width: 100%;
   }
   
   /* Group the mobile CTA and hamburger menu on the right */
