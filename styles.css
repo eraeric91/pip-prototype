@@ -77,7 +77,9 @@ body {
 }
 
 .marketing-banner {
-    background-color: #28a745; /* Green background */
+    background-color: var(--red);
+    color: var(--white);
+    font-size: 14px;
     text-align: center;
     padding: 8px 24px;
     position: relative;
