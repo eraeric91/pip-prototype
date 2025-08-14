@@ -470,5 +470,9 @@ footer {
     .nav-links.active {
         display: flex;
     }
+    
+    button.nav {
+      width: 160px;
+      }
 
 }
