@@ -438,7 +438,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 16px 24px;
-    position: relative; /* Add this for absolute positioning context */
+    position: relative;
   }
   
   /* Create a flex container for the right side items */
@@ -466,17 +466,17 @@ footer {
     top: 100%;
     left: 0;
     right: 0;
-    background-color: var(--blue); /* Same as nav background */
+    background-color: var(--blue);
     flex-direction: column;
     padding: 20px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     gap: 16px;
-    z-index: 999; /* Ensure it appears above other content */
+    z-index: 1001; /* Higher than marketing banner (1000) */
   }
   
   /* Style the mobile nav links */
   .nav-links a {
-    color: var(--white); /* Make sure text is white */
+    color: var(--white);
     font-size: 18px;
     padding: 12px 0;
     border-bottom: 1px solid rgba(255,255,255,0.2);
@@ -490,8 +490,9 @@ footer {
     display: flex;
   }
   
-  button.nav {
-    width: 160px;
+  /* Make the button in the mobile menu full width */
+  .nav-links button.nav {
+    width: 100%; /* Full width instead of 160px */
   }
 
 }
