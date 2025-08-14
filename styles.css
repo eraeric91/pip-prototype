@@ -187,7 +187,6 @@ button {
     background-color: var(--green);
     padding: var(--space-md);
     border-radius: 8px;
-    border-color: var(--green);
     cursor: pointer;
 }
 
