@@ -416,10 +416,26 @@ footer {
     text-align: center;
   }
   
+  /* Adjust nav container spacing */
+  nav {
+    padding: 12px 16px; /* Reduce top/bottom padding */
+  }
+  
   /* Show mobile elements */
   .mobile-cta,
   .mobile-menu-toggle {
     display: flex;
+  }
+  
+  /* Make mobile CTA button smaller */
+  .mobile-cta button {
+    padding: 8px 16px; /* Smaller padding */
+    font-size: 14px; /* Smaller text */
+  }
+  
+  /* Adjust hamburger menu */
+  .mobile-menu-toggle {
+    padding: 4px; /* Less padding around hamburger */
   }
   
   /* Hide desktop CTA */
@@ -427,17 +443,18 @@ footer {
     display: none;
   }
   
-  /* Hide nav links by default on mobile */
+  /* Tighter nav links spacing */
   .nav-links {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
-    background-color: white; /* Adjust to match your design */
+    background-color: white;
     flex-direction: column;
-    padding: 20px;
+    padding: 16px 20px; /* Reduce padding */
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    gap: 16px; /* Reduce gap between links */
   }
   
   /* Show nav links when active */
