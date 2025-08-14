@@ -151,24 +151,22 @@ nav {
     text-decoration: underline;
 }
 
-.mobile-cta, .mobile-menu-toggle {
-  display: none;
-  }
-  
+.mobile-cta,
 .mobile-menu-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  flex-direction: column;
-  gap: 4px;
-  padding: 8px;
+    display: none;
 }
 
-.mobile-menu-toggle span {
-  width: 24px;
-  height: 3px;
-  background-color: #333; /* Adjust color to match your design */
-  transition: 0.3s;
+/* Mobile menu toggle styling */
+.mobile-menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.mobile-menu-toggle img {
+    width: 24px;
+    height: 24px;
 }
 
 /* Logo styling */
@@ -431,12 +429,19 @@ footer {
   }
   
   /* Create proper layout: logo | [space] | button + menu */
-  nav {
-        display: grid;
-        grid-template-columns: 1fr auto auto;
-        gap: 24px;
+  @media (max-width: 768px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
         align-items: center;
         padding: 16px 20px;
+    }
+    
+    /* Create a flex container for the right side items */
+    .mobile-nav-group {
+        display: flex;
+        align-items: center;
+        gap: 24px;
     }
     
     /* Show mobile elements */
@@ -462,7 +467,6 @@ footer {
         padding: 20px;
         box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         gap: 16px;
-        grid-column: 1 / -1; /* Span all columns */
     }
     
     .nav-links.active {
