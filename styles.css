@@ -428,8 +428,6 @@ footer {
     text-align: center;
   }
   
-  /* Create proper layout: logo | [space] | button + menu */
-  @media (max-width: 768px) {
     nav {
         display: flex;
         justify-content: space-between;
