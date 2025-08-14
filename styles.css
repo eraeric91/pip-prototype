@@ -159,6 +159,7 @@ nav {
 /* Mobile menu toggle styling */
 .mobile-menu-toggle {
     background: none;
+    color: white;
     border: none;
     cursor: pointer;
     padding: 8px;
@@ -187,11 +188,13 @@ button {
     background-color: var(--green);
     padding: var(--space-md);
     border-radius: 8px;
+    border-color: var(--green);
     cursor: pointer;
 }
 
 button:hover {
     background-color: var(--green-hover);
+    border-color: var(--green-hover);
 }
 
 button.nav {
@@ -290,7 +293,7 @@ section.blue {
 }
 
 .two-column-row {
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
   display: flex;
   gap: 16px;
@@ -388,73 +391,71 @@ footer {
 }
 
 @media (max-width: 768px) {
-    :root {
+  :root {
     --font-size-display: 32px;
     --font-size-heading: 24px;
     --font-size-subheading: 20px;
     --font-size-body: 16px;
     }
-
-    .marketing-banner {
+    
+  .marketing-banner {
     padding: 4px 24px;
-    }
-
-    button {
+  }
+    
+  button {
     width: 100%;
-    }
-
-    section {
+  }
+  
+  section {
     padding: var(--space-2xl) 0;
-    }
+  }
 
-    .image {
+  .image {
     width: 100%
-    }
+  }
 
-    .two-column-row {
+  .two-column-row {
     flex-direction: column; /* Stack vertically on mobile */
-    }
-
-    .text-block {
+  }
+  
+  .text-block {
     margin-bottom: 48px;
-    }
-
-    footer {
+  }
+  
+  footer {
     flex-direction: column;
     padding: var(--space-4xl) var(--space-lg);
     gap: 24px;
     text-align: center;
-    }
-
+  }
+  
+  /* Create proper layout: logo | [space] | button + menu */
+  @media (max-width: 768px) {
     nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 16px 20px;
     }
-
+    
     /* Create a flex container for the right side items */
     .mobile-nav-group {
         display: flex;
         align-items: center;
-        gap: 16px;
+        gap: 24px;
     }
-
+    
     /* Show mobile elements */
     .mobile-cta,
     .mobile-menu-toggle {
         display: block;
     }
-
-    .mobile-menu-toggle:hover {
-        background-color: var(--blue);
-    }
-
+    
     /* Hide desktop CTA */
     .desktop-cta {
         display: none;
     }
-
+    
     /* Nav links dropdown */
     .nav-links {
         display: none;
@@ -468,13 +469,9 @@ footer {
         box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         gap: 16px;
     }
-
+    
     .nav-links.active {
         display: flex;
-    }
-
-    button.nav {
-        width: 160px;
     }
 
 }
