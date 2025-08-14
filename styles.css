@@ -391,5 +391,12 @@ footer {
   
   .text-block {
     margin-bottom: 48px;
+  }
+  
+  footer {
+    flex-direction: column;
+    gap: 16px; /* Adds space between stacked items */
+    text-align: center;
+  }
 
 }
