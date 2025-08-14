@@ -76,6 +76,14 @@ body {
     background-color: var(--cream);
 }
 
+.marketing-banner {
+    background-color: #28a745; /* Green background */
+    text-align: center;
+    padding: 8px 24px;
+    position: relative;
+    z-index: 1000;
+}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -388,6 +396,10 @@ footer {
     --font-size-subheading: 20px;
     --font-size-body: 16px;
     }
+    
+  .marketing-banner {
+    padding: 4px 24px;
+  }
     
   button {
     width: 100%;
