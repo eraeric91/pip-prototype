@@ -454,6 +454,13 @@ footer {
     display: block;
   }
   
+  /* Fix the menu icon size */
+  .mobile-menu-toggle img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+  }
+  
   /* Hide desktop CTA */
   .desktop-cta {
     display: none;
@@ -466,12 +473,12 @@ footer {
     top: 100%;
     left: 0;
     right: 0;
-    background-color: var(--blue);
+    background-color: var(--grey); /* Changed to grey */
     flex-direction: column;
     padding: 20px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     gap: 16px;
-    z-index: 1001; /* Higher than marketing banner (1000) */
+    z-index: 1001;
   }
   
   /* Style the mobile nav links */
@@ -492,7 +499,7 @@ footer {
   
   /* Make the button in the mobile menu full width */
   .nav-links button.nav {
-    width: 100%; /* Full width instead of 160px */
+    width: 100%;
   }
 
 }
